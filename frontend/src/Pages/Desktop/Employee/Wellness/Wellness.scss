@@ -1,0 +1,39 @@
+.wellness {
+    .wellnessCards {
+        background: #E5E3FF;
+        border-radius: 12px;
+        padding: 16px;
+        // margin-bottom: 12px;
+        &:hover {
+            background: #6B62DC;
+            color: #fff;
+        }
+        .videoWrapper {
+            // background: #fff;
+            border-radius: 12px;
+            min-height: 264px;
+            margin-bottom: 16px;
+            // overflow: hidden;
+            iframe {
+                border: none;
+                border-radius: 12px;
+            }
+        }
+        h6 {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .subDetail {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 12px;
+            span {
+                float: right;
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+$primary: #6B62DC;
+$white: #ffffff;
+
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 20px;
+}
+h5 {
+    font-size: 18px;
+}
+h6 {
+    font-size: 16px;
+}
+
+.dashboardWrapper {
+    padding: 20px 12px;
+
+    // .highlightedTabs {
+    //     margin-bottom: 32px;
+    //     .box {
+    //         min-height: 108px;
+    //         display: flex;
+    //         align-items: center;
+    //         img {
+    //             margin-right: 16px;
+    //             height: 68px;
+    //             width: 68px;
+    //         }
+    //         p {
+    //             font-size: 12px;
+    //             font-family: "Montserrat", sans-serif;
+    //         }
+    //         h6 {
+    //             margin-bottom: 8px;
+    //             font-family: "Montserrat", sans-serif;
+    //             font-weight: 600;
+    //         }
+    //     }
+
+    //     $box-colors: ("articleSection",#FFD8E3),("trendingdiscussion", #ACD4FB),("initiateclaim",#E5E3FF),("riskmap",#DCFFDD);
+    //     $k: 0;
+    //     @each $color in $box-colors {
+    //         $bacRightP: $k * 70;
+    //         $k: $k + 1;
+    //         .#{nth($color,1)} {
+    //             @extend .box;
+    //             background: nth($color,2);
+    //             position: relative;
+    //             @if $k%2 == 0{
+    //                 border-radius: 100px 0px 0px 100px;
+    //                 padding: 12px 88px 12px 40px;
+    //             }@else{
+    //                 border-radius: 0px 100px 100px 0px;
+    //                 padding: 12px 40px 12px 88px;
+    //             }
+    //             &:before {
+    //                 content: "";
+    //                 position: absolute;
+    //                 left: 12px;
+    //                 top: 50%;
+    //                 transform: translateY(-50%);
+    //                 background: url("../../../../../public/images/highlighted_icons.svg") no-repeat;
+    //                 background-position: -#{$bacRightP}px 0px;
+    //                 background-size: 350px;
+    //                 height: 70px;
+    //                 width: 70px;
+    //             }
+    //         }
+    //     }
+    //     .trendingdiscussion, .riskmap {
+    //         &:before {
+    //             left: auto;
+    //             right: 12px;
+    //         }
+            
+    //     }
+
+    // }
+    // .buyInsurance {
+    //     $product-insurance: healthInsurance, carInsurance, bikeInsurance, termInsurance, investmentPlan, travelInsurance;
+    //     $k: 0;
+    //     @each $icons in $product-insurance {
+    //         $bacRightP: $k * 74;
+    //         $k: $k + 1;
+    //         .#{$icons}  {
+    //             background: transparent;
+    //             border: none;
+    //             display: block;
+    //             position: relative;
+    //             padding-top: 83px;
+    //             margin: 0px auto 12px;
+    //             font-weight: 600;
+    //             width: 74px;
+    //             &:hover {
+    //                 cursor: pointer;
+    //                 color: $primary;
+    //                 &:before {
+    //                     box-shadow: 0px -10px 28px rgba(#000, 0.1);
+    //                 }
+    //             }
+    //             &:before {
+    //                 position: absolute;
+    //                 left: 0px;
+    //                 top: 0px;
+    //                 background-color: $white;
+    //                 border-radius: 20px;
+    //                 box-shadow: 0px 10px 28px rgba(#000, 0.1);
+    //                 content: '';
+    //                 font-size: 12px;
+    //                 height: 74px;
+    //                 width: 74px;
+    //                 background-image: url("../../../../../public/images/insurance_product_icons.svg");
+    //                 background-position: -#{$bacRightP}px 0px;
+    //                 background-size: 444px;
+    //             }
+    //         }
+    //     }
+    // }
+}

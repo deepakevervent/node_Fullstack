@@ -1,0 +1,8 @@
+FROM node:17-alpine
+WORKDIR /app/
+ENV PATH /app/node_modules/.bin:$PATH
+COPY package*.json ./app/
+COPY . .
+RUN npm cache clean --force
+RUN npm install -g npm@latest && npm install --legacy-peer-deps
+CMD ["npm", "start", "dev"]

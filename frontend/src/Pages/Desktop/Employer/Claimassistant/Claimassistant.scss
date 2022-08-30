@@ -1,0 +1,15 @@
+.claimAssistant {
+    .productDataTable {
+        border: none!important;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        .MuiDataGrid-columnHeaders {
+            background: #EEF6FE;
+            font-weight: 600;
+        }
+        .MuiDataGrid-footerContainer {
+            border: none!important;
+        }
+    }
+}

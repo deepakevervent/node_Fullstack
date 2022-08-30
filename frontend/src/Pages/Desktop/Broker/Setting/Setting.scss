@@ -1,0 +1,35 @@
+.permissions {
+    .bluetopbar {
+        background: #E5E3FF;
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 20px;
+        .equalWidth {
+            width: 140px;
+        }
+        h5 {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 0px;
+        }
+    }
+    .allowsetting {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        padding: 16px;
+        margin-bottom: 20px;
+        .equalWidth {
+            width: 140px;
+        }
+        h5 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 0px;
+        }
+    }
+}

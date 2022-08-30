@@ -1,0 +1,112 @@
+.trendingQuestions {
+  .questionPost {
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 12px 0px 12px 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    .postTitle {
+      display: flex;
+      padding-bottom: 0px;
+      .userIcon {
+        background-color: #eee;
+        border: 1px solid rgba(107, 98, 220, 0.3);
+        border-radius: 100px;
+        margin-right: 12px;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .userName {
+        h6 {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          margin-bottom: 6px;
+        }
+        p {
+          font-size: 11px;
+          line-height: 13px;
+          color: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+    .question {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 24px;
+    }
+    .greySection {
+      background: rgba(107, 98, 220, 0.1);
+      // padding-top: 8px;
+      padding-left: 12px;
+      margin-left: 4px;
+      .upvote,
+      .answer {
+        color: #000000;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        padding-left: 16px;
+        position: relative;
+        top: -8px;
+      }
+      .upvote {
+        background: url("../../../../../public/images/upvote_icon.svg")
+          no-repeat 0px 2px/10px;
+        margin-right: 24px;
+        &.active {
+          background: url("../../../../../public/images/upvote_active_icon.svg")
+            no-repeat 0px 2px/10px;
+          color: #6b62dc;
+        }
+      }
+      .answer {
+        background: url("../../../../../public/images/answer_icon.svg")
+          no-repeat 0px 3px/10px;
+
+        &.active {
+          background: url("../../../../../public/images/answer_active_icon.svg")
+            no-repeat 0px 3px/10px;
+          color: #6b62dc;
+        }
+      }
+      .postGroup {
+        background-color: #ffffff;
+        border-radius: 8px;
+        display: flex;
+        // margin-top: 12px;
+        // margin-bottom: -16px;
+        overflow: hidden;
+        input {
+          border-radius: 8px;
+          padding: 0px 12px;
+          height: 40px;
+        }
+        fieldset {
+          border: none;
+        }
+        button {
+          background-color: #6b62dc;
+          border-radius: 0px 8px 8px 0px;
+          color: #ffffff;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          height: 40px;
+          width: 86px;
+        }
+      }
+      .innerPost {
+        margin-top: 8px;
+      }
+    }
+  }
+}

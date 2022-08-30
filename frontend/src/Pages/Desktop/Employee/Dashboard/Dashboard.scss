@@ -1,0 +1,476 @@
+$primary: #6b62dc;
+$white: #ffffff;
+
+h2 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+
+.dashboardWrapper {
+  padding: 20px 12px;
+  .logoCol {
+    max-width: 183px !important;
+    margin-bottom: 24px;
+  }
+  .topNavbar {
+    width: calc(100% - 183px);
+    margin-bottom: 24px;
+    .searchInput {
+      position: relative;
+      background: url("../../../../../public/images/search_icon.svg") no-repeat 17px center/18px;
+      max-width: 360px;
+      input {
+        width: 360px;
+        height: 46px;
+        background: rgba(172, 212, 251, 0.1);
+        border: 1px solid rgba(172, 212, 251, 0.2);
+        border-radius: 16px;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 14px;
+        padding-left: 39px;
+        &:focus-visible {
+          border: 1px solid #ACD4FB;
+          outline: none;
+        }
+      }
+    }
+    .notificationMenu {
+      color: #000;
+      display: inline-block;
+      margin-right: 22px;
+      padding-top: 3px;
+      height: 40px;
+      width: 40px;
+      .bellIcon {
+        background: #fff url("../../../../../public/images/bell_icon.svg") no-repeat center 9px/21px;
+        border-radius: 50%;
+        position: relative;
+        height: 36px;
+        width: 36px;
+        &:hover {
+          background-color: #eee;
+        }
+        .number {
+          background-color: #EC3F3F;
+          color: #fff;
+          border-radius: 50%;
+          font-size: 10px;
+          position: absolute;
+          padding-top: 1px;
+          top: 7px;
+          right: 6px;
+          height: 14px;
+          width: 14px;
+          z-index: 9;
+        }
+      }
+    }
+    .signoutMenu {
+      background: #fff url("../../../../../public/images/logout_icon.svg") no-repeat center center/44px;
+      color: #000;
+      display: inline-block;
+      height: 46px;
+      width: 49px;
+      button {
+        height: 46px;
+        width: 60px;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .menuCol {
+    max-width: 183px !important;
+  }
+  .briefDetails {
+    background: $primary;
+    border-radius: 20px;
+    padding: 36px 24px;
+    margin-bottom: 31px;
+    .colSection {
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 16px;
+        height: 60px;
+        width: 60px;
+      }
+      p {
+        font-family: 'Montserrat';
+        color: rgba(#fff, 0.7);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      h4 {
+        color: #fff;
+        margin: 8px 0px 0px;
+
+        &.inrIcon {
+          background: url("../../../../../public/images/inr_icon_white.svg") no-repeat 0px 5px/10px;
+          padding-left: 14px;
+        }
+      }
+      .members {
+        background-color: rgba(#fff, 0.2);
+        color: #fff;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 12px;
+        border-radius: 16px;
+        padding: 6px 12px;
+        margin-top: 9px;
+      }
+    }
+  }
+  .highlightedTabs {
+    margin-bottom: 8px;
+    .box {
+      min-height: 108px;
+      display: flex;
+      align-items: center;
+      img {
+        margin-right: 16px;
+        height: 68px;
+        width: 68px;
+      }
+      p {
+        font-size: 12px;
+        font-family: "Montserrat", sans-serif;
+        line-height: 20px;
+      }
+      h6 {
+        margin-bottom: 8px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        line-height: 20px;
+      }
+    }
+
+    $box-colors: ("articleSection", #ffd8e3), ("trendingdiscussion", #acd4fb), ("initiateclaim", #e5e3ff), ("riskmap", #dcffdd), ("endorse", #dcffdd);
+    $k: 0;
+    @each $color in $box-colors {
+      $bacRightP: $k * 70;
+      $k: $k + 1;
+      .#{nth($color,1)} {
+        @extend .box;
+        background: nth($color, 2);
+        position: relative;
+        margin-bottom: 24px;
+        @if $k%2 == 0 {
+          border-radius: 100px 0px 0px 100px;
+          padding: 12px 104px 12px 40px;
+          margin-left: 12px;
+        } @else {
+          border-radius: 0px 100px 100px 0px;
+          padding: 12px 40px 12px 104px;
+          margin-right: 12px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          background: url("../../../../../public/images/highlighted_icons.svg") no-repeat;
+          background-position: -#{$bacRightP}px 0px;
+          background-size: 350px;
+          height: 70px;
+          width: 70px;
+        }
+      }
+    }
+    .trendingdiscussion, .riskmap {
+      &:before {
+        left: auto;
+        right: 12px;
+      }
+      &.leftside {
+        border-radius: 0px 100px 100px 0px;
+        padding: 12px 40px 12px 88px;
+        &:before {
+          left: 12px;
+          right: auto;
+        }
+      }
+    }
+  }
+  .buyInsurance {
+    h3 {
+      margin-bottom: 16px;
+    }
+
+    $product-insurance: healthInsurance, carInsurance, bikeInsurance, termInsurance, investmentPlan, travelInsurance;
+    $k: 0;
+    @each $icons in $product-insurance {
+      $bacRightP: $k * 74;
+      $k: $k + 1;
+      .#{$icons} {
+        background: transparent;
+        border: none;
+        display: block;
+        position: relative;
+        padding-top: 83px;
+        margin: 0px auto 12px;
+        font-weight: 600;
+        width: 74px;
+        &:hover {
+          cursor: pointer;
+          color: $primary;
+          &:before {
+            box-shadow: 0px -10px 28px rgba(#000, 0.1);
+          }
+        }
+        &:before {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          background-color: $white;
+          border-radius: 20px;
+          box-shadow: 0px 10px 28px rgba(#000, 0.1);
+          content: "";
+          font-size: 12px;
+          height: 74px;
+          width: 74px;
+          background-image: url("../../../../../public/images/insurance_product_icons.svg");
+          background-position: -#{$bacRightP}px 0px;
+          background-size: 444px;
+        }
+      }
+    }
+  }
+  .riskmapScore {
+    .scoreNiddle {
+      position: relative;
+      height: 28px;
+      width: 28px;
+    }
+  }
+  .todolist {
+    margin-bottom: 40px;
+    h4 {
+      margin-bottom: 17px;
+    }
+
+    $product-insurance: addpolicy, familyprofile, riskscore, addcity;
+    $k: 0;
+    @each $icons in $product-insurance {
+      $bacRightP: $k * 32;
+      $k: $k + 1;
+      .#{$icons} {
+        position: relative;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        color: #000;
+        display: flex;
+        align-items: center;
+        padding: 0px 4px 0px 44px;
+        margin-bottom: 12px;
+        min-height: 36px;
+        &:hover {
+          color: $primary;
+          &:before {
+            background-color: #e5e3ff;
+          }
+        }
+        &:before {
+          position: absolute;
+          left: 0px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #eeeeee;
+          border-radius: 50px;
+          content: "";
+          height: 32px;
+          width: 32px;
+          background-image: url("../../../../../public/images/todo_icons.svg");
+          background-position: -#{$bacRightP}px 0px;
+          background-size: 128px;
+        }
+      }
+    }
+  }
+  .RequestBar {
+    margin-bottom: 20px;
+    padding-top: 2px;
+    p {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 2px;
+      .green {
+        background: #DCFFDD;
+        border-radius: 20px;
+        color: #219653;
+        display: inline-block;
+        font-size: 9px;
+        font-weight: 500;
+        height: 19px;
+        padding: 3.5px 8px;
+        margin-left: 2px;
+        position: relative;
+        top: -1px;
+      }
+      .red {
+        @extend .green;
+        background: #FFD8E3;
+        color: #EB5757;
+      }
+    }
+    h6 {
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+  }
+  .employerPolicyWrapper {
+    margin-bottom: 32px;
+
+    $box-colors: ("bluePolicyCard", #E5E3FF), ("redPolicyCard", #FFD8E3), ("cyanPolicyCard", #ACD4FB);
+    $k: 0;
+    @each $color in $box-colors {
+      $bacRightP: $k * 70;
+      $k: $k + 1;
+      .#{nth($color,1)} {
+        border-radius: 12px;
+        padding: 12px 12px 0px;
+        margin-bottom: 12px;
+        position: relative;
+        background: nth($color, 2);
+        box-shadow: 16px 16px 28px nth($color, 2);
+        img {
+          width: 100%;
+          max-width: 100px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 11px;
+          line-height: 20px;
+          &.small {
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 20px;
+            color: rgba(#000, 0.7);
+          }
+        }
+        h5 {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          margin-top: 6px;
+          margin-bottom: 4px;
+        }
+        h6 {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 15px;
+        }
+        .active {
+          background: #FFFFFF;
+          box-shadow: 0px 4px 4px darken($color: nth($color, 2), $amount: 8%);
+          border-radius: 10px;
+          color: #219653;
+          display: inline-block;
+          font-size: 11px;
+          padding: 2px 6px;
+        }
+        .inactive {
+          @extend .active;
+          color: #EB5757;
+        }
+        .rIcon {
+          background: url("../../../../../public/images/inr_icon.svg") no-repeat 0px 3px/7px;
+          padding-left: 9px;
+        }
+        .whitepart {
+          background-color: #fff;
+          border-radius: 0px 0px 12px 12px;
+          display: flex;
+          flex-direction: row;
+          margin: 12px -12px 0px;
+          padding: 12px;
+          position: relative;
+          .col {
+            text-align: center;
+            width: 100%;
+            &:first-child {
+              text-align: left;
+            }
+            &:last-child {
+              text-align: right;
+            }
+          }
+          .note {
+            font-size: 10px;
+            position: absolute;
+            right: 0px;
+            bottom: -20px;
+          }
+        }
+      }
+    }
+  }
+  .recentAddedEmployee {
+    font-size: 12px;
+    font-weight: 400;
+    thead {
+      th {
+        background-color: #EEF6FE;
+        font-weight: 500;
+        padding: 8px;
+        &:first-child {
+          border-radius: 16px 0px 0px 0px;
+        }
+        &:last-child {
+          border-radius: 0px 16px 0px 0px;
+        }
+      }
+    }
+    tbody {
+      th, td {
+        padding: 12px 8px;
+      }
+    }
+    
+  }
+}
+
+.notificationList {
+  h5 {
+    margin-bottom: 8px;
+  }
+  .listItem {
+    display: block;
+    border-top: 1px solid rgba(#000, 0.1);
+    &:hover {
+      background-color: #F0EFFC;
+    }
+    h6 {
+      font-weight: 500;
+      font-size: 12px;
+      max-width: 360px;
+    }
+    p {
+      color: rgba(0, 0, 0, 0.7);
+      font-weight: 400;
+      font-size: 12px;
+      max-width: 360px;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+$blue: #4d5efe;
+
+// Login Fields
+.loginField {
+  // margin-top: 30px;
+  margin-bottom: 60px;
+  width: 100%;
+  position: relative;
+
+  $othericons: validfield, invalidfield;
+    $k: 0;
+  
+    @each $icons in $othericons {
+      $bacRightP: $k * 28;
+      $k: $k +1;
+  
+      &.#{$icons} {
+        position: relative;
+        &:after {
+          background: url("../../../Assets/images/login_validate_icon.svg") no-repeat -#{$bacRightP}px 0px/56px;
+          content: "";
+          position: absolute;
+          top: 8px;
+          right: 0;
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+
+  $othericons: userid, password, email;
+  $k: 0;
+  @each $icons in $othericons {
+    $bacRightP: $k * 24;
+    $k: $k + 1;
+    &.#{$icons} {
+      position: relative;
+      &:before {
+        background: url("../../../Assets/images/login_fields_icon.svg")
+          no-repeat -#{$bacRightP}px
+          0px/96px;
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid #e7e1f3;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding-left: 32px;
+    height: 40px;
+    width: 100%;
+    &:focus {
+      outline: none;
+      border-bottom-color: $blue;
+    }
+  }
+}

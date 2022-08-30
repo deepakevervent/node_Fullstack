@@ -1,0 +1,59 @@
+$blue: #4d5efe;
+$bg: #e7e1f3;
+$white: #fff;
+
+.loginWrapper {
+  height: 100vh;
+  background-color: $white;
+
+  .leftcol {
+    background: #e7e1f3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+    img {
+      width: 100%;
+      max-width: 415px;
+    }
+  }
+
+  .formsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .innerWrapper {
+      text-align: center;
+      width: 470px;
+
+      h2 {
+        font-size: 27px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: #6f6f6f;
+        line-height: 24px;
+        font-size: 14px;
+      }
+
+      h6 {
+        font-size: 16px;
+        font-weight: 400;
+        color: #000;
+      }
+
+      .formFields {
+        margin-top: 60px;
+      }
+
+      .forgotpassword_link {
+        text-align: right;
+      }
+    }
+  }
+}
